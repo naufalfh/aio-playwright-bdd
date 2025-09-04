@@ -1,6 +1,7 @@
 import { createBdd } from "playwright-bdd";
 import { test } from "../fixtures/fixtures";
 import { elements } from "../pages/elements";
+import * as helper from "../helper";
 
 const { Given, When, Then } = createBdd(test);
 
@@ -9,11 +10,14 @@ Given('User navigates to {string}', async ({ sauceDemoPage }, url) => {
 })
 
 When('User click on {string}', async ({sauceDemoPage}, element) => {
-    for (let item in elements) {
-        if (item === element) {
-            await sauceDemoPage.clickElement(elements[item]);
-        }
-    }
+    // for (let item in elements) {
+    //     if (item === element) {
+    //         await sauceDemoPage.clickElement(elements[item]);
+    //     }
+    // }
+
+    const locator = await helper.readElement(element);
+    await sauceDemoPage.clickElement(locator);
 })
 
 When('User select {string} on {string} list', async ({sauceDemoPage}, option, element) => {
