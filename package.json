@@ -1,0 +1,21 @@
+{
+  "name": "aio-playwright-bdd",
+  "version": "1.0.0",
+  "description": "Implementation of Playwright BDD for Web and API Testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run bddgen && npm run playwright-test --reporter=html,list",
+    "bddgen": "npx bddgen",
+    "playwright-test": "npx playwright test --headed"
+  },
+  "keywords": [],
+  "author": "naufalfh",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.1",
+    "allure-playwright": "^3.3.3",
+    "playwright-bdd": "^8.4.1"
+  }
+}
