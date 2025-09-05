@@ -2,7 +2,11 @@
 import { defineConfig, devices } from '@playwright/test';
 import { defineBddConfig } from "playwright-bdd";
 
-import 'dotenv/config';
+import dotenv from 'dotenv';
+dotenv.config({
+  // path: '.env',
+  override: true
+});
 
 const testDir = defineBddConfig ({
   features: 'tests/features/*.feature',

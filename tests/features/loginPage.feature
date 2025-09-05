@@ -5,8 +5,8 @@ Feature: Sauce Demo Login Page
 
     @TC-1
     Scenario: User login into Saucedemo website by using standard user
-        When User input "standard_user" on "usernameField"
-        And User input "secret_sauce" on "passwordField"
+        When User input "ENV_USERNAME" on "usernameField"
+        And User input "ENV_PASSWORD" on "passwordField"
         And User click on "loginButton"
         Then User verify url contains "/inventory.html"
         And User verify text "Products" is visible

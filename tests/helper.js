@@ -8,6 +8,11 @@ export const readElement = async ( elementKey ) => {
     }
 }
 
-export const readEnv = async ( key ) => {
-    return process.env[key];
+export const readEnv = async ( value ) => {
+    if (value.includes("ENV_")) {
+        const envKey = value.replace("ENV_", "");
+        return process.env[envKey];
+    } else {
+        return value;
+    }
 }
