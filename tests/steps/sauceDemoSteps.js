@@ -1,6 +1,5 @@
 import { createBdd } from "playwright-bdd";
 import { test } from "../fixtures/fixtures";
-// import { elements } from "../pages/elements";
 import * as helper from "../helper";
 
 const { Given, When, Then } = createBdd(test);
