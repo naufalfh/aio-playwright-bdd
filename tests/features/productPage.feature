@@ -2,8 +2,8 @@
 Feature: Sauce Demo Product Page
     Background:
         Given User navigates to "https://www.saucedemo.com/"
-        And User input "standard_user" on "usernameField"
-        And User input "secret_sauce" on "passwordField"
+        And User input "ENV_USERNAME" on "usernameField"
+        And User input "ENV_PASSWORD" on "passwordField"
         And User click on "loginButton"
 
     @TC-5
