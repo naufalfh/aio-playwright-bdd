@@ -28,6 +28,12 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+    - name: Load Allure results history
+      uses: actions/checkout@v2
+      if: always()
+      with: 
+        ref: gh-pages
+        path: gh-pages
     - name: Build Allure report
       uses: simple-elf/allure-report-action@v1.7
       if: always()
