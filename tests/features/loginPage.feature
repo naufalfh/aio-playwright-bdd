@@ -21,4 +21,4 @@ Feature: Sauce Demo Login Page
         | condition          | username          | password          | errorMessageText                                                          |
         | locked user        |locked_out_user    | secret_sauce      | Epic sadface: Sorry, this user has been locked out.                       |
         | invalid credential |standard_user      | secret_sauce1     | Epic sadface: Username and password do not match any user in this service |
-        | empty fields       |                   |                   | Epic sadface: Username and Password are required                          |
+        | empty fields       |                   |                   | Epic sadface: Username is required                          |
