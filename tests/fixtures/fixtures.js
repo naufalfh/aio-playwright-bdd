@@ -10,7 +10,6 @@ export const test = base.extend({
 
     reqresApi: async ({request}, use) => {
         const generalRequest = new RequestLib(request);
-        // const apiContext = await request.newContext();
         await use(generalRequest);
     }
 })
