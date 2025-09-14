@@ -1,5 +1,5 @@
 import { SauceDemoPage } from "../pages/sauceDemoObj";
-import { RequestLib } from "../requestLib";
+import { RequestLib } from "../lib/requestLib";
 import { test as base } from "playwright-bdd";
 
 export const test = base.extend({
@@ -8,7 +8,7 @@ export const test = base.extend({
         await use(generalPage);
     },
 
-    reqresApi: async ({request}, use) => {
+    requestApi: async ({request}, use) => {
         const generalRequest = new RequestLib(request);
         await use(generalRequest);
     }
