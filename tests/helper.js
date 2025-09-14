@@ -1,10 +1,10 @@
-import { elements } from "./pages/elements";
+import * as elements from "./pages/elements";
 
 // To get element locator from element file
 export const readElement = async ( elementKey ) => {
-    for (let item in elements) {
+    for (let item in elements.elements) {
         if (item === elementKey) {
-            return elements[item];
+            return elements.elements[item];
         }
     }
 }
