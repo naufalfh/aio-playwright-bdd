@@ -9,7 +9,7 @@ dotenv.config({
 });
 
 const testDir = defineBddConfig ({
-  features: 'tests/features/*.feature',
+  features: 'tests/features/**/*.feature',
   steps: ['tests/steps/*.js', 'tests/fixtures/*.js'],
   // featuresRoot: './tests',
 })
