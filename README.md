@@ -25,12 +25,11 @@ Implementation of Playwright BDD for Web and API Testing
 3. Open terminal and run `npm install` to install all required package
 4. Also install VS Code Extension
     - Cucumber (Gherkin) Full Support
-    - Cucumber [just in case]
 5. Open terminal and run
     - To execute all tests:
     > npm run test
     - To execute by tags
-    > npx playwright test --headed --grep @tags
+    > npx bddgen --tags @tag; npx playwright test
 6. Generate report
     - html: `npx playwright show-report`
     - allure: `allure serve allure-results`
