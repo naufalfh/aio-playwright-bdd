@@ -16,15 +16,16 @@ Implementation of Playwright BDD for Web and API Testing
 **Cloning Project:**
 1. Open terminal and choose root folder to save the project folder
 2. Run one of these command:
-    - using https: `git clone https://github.com/naufalfh/XtramileTest.git`
-    - using ssh: `gir clone git@github.com:naufalfh/XtramileTest.git`
+    - using https: `git clone https://github.com/naufalfh/aio-playwright-bdd.git`
+    - using ssh: `git clone git@github.com:naufalfh/aio-playwright-bdd.git`
 
 **Into the Project:**
 1. Open VS Code
 2. Open project folder
-3. Open terminal and run `npm install` to install all required package
+3. Open terminal and run `npm install` to install all required package, and
+   run `npx playwright install` to install playwright browser
 4. Also install VS Code Extension
-    - Cucumber (Gherkin) Full Support
+    - Cucumber (Gherkin) Full Support (Mandatory)
 5. Open terminal and run
     - To execute all tests:
     > npm run test
@@ -38,11 +39,20 @@ Implementation of Playwright BDD for Web and API Testing
 **Project Structure:**
 - tests
     - features
-        - *.feature
+        - api
+            - *.feature
+        - web
+            - *.feature
     - fixtures
         - fixtures.js
+    - lib
+        - assertLib.js
+        - requestLib.js
     - pages
-        - element.js
-        - sauceDemoObj.js
+        - element
+            - sauceDemoElements.js
+        - webObject.js
     - steps
-        - sauceDemoSteps.js
+        - apiSteps.js
+        - webSteps.js
+    - helper.js
