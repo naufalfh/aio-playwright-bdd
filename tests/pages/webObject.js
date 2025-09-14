@@ -1,6 +1,6 @@
 import { expect } from "@playwright/test";
 
-class SauceDemoPage {
+class WebPage {
     constructor(page) {
         this.page = page;
     }
@@ -42,4 +42,4 @@ class SauceDemoPage {
     }
 }
 
-export { SauceDemoPage };
+export { WebPage };

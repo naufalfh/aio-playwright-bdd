@@ -1,10 +1,10 @@
-import { SauceDemoPage } from "../pages/sauceDemoObj";
+import { WebPage } from "../pages/webObject";
 import { RequestLib } from "../lib/requestLib";
 import { test as base } from "playwright-bdd";
 
 export const test = base.extend({
-    sauceDemoPage: async ({page}, use) => {
-        const generalPage = new SauceDemoPage(page);
+    webPage: async ({page}, use) => {
+        const generalPage = new WebPage(page);
         await use(generalPage);
     },
 
