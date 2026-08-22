@@ -56,3 +56,12 @@ Implementation of Playwright BDD for Web and API Testing
         - apiSteps.js
         - webSteps.js
     - helper.js
+
+**AI-Assisted Testing:**
+
+This repo ships two separate MCP (Model Context Protocol) configs for AI coding assistants to interact with a real browser:
+
+- `.mcp.json` — Playwright MCP for **Claude Code**. Committed to the repo, so it's available automatically after cloning; on first use Claude Code will show it as "pending approval" — approve it once (via the prompt or `claude mcp list`) to enable browser tools like `browser_navigate` and `browser_snapshot`.
+- `.vscode/mcp.json` — Playwright MCP for **VS Code's own MCP client** (e.g. Copilot Chat). Separate client, separate config — the two are not interchangeable, and each needs to be approved independently.
+
+See `CLAUDE.md` for project conventions and the recommended workflow when using MCP to author new tests.
