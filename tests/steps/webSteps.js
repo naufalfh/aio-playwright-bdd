@@ -4,9 +4,13 @@ import * as helper from "../helper";
 
 const { Given, When, Then } = createBdd(test);
 
+/* Pre-condition Steps */
+
 Given('User navigates to {string}', async ( { webPage }, url ) => {
     await webPage.navigateToUrl(url);
 })
+
+/* Main Steps */
 
 When('User click on {string}', async ( { webPage }, element ) => {
     const locator = await helper.readElement(element);
@@ -24,6 +28,20 @@ When('User input {string} on {string}', async ( { webPage }, value, element ) =>
 
     await webPage.inputValue(locator, inputValue);
 })
+
+When('User click iframe {string} element', async ( { webPage }, element ) => {
+    let iframe = await webPage.getIframe(await helper.readElement(element));
+
+    await webPage.clickIframe(iframe, element);
+})
+
+When('User scroll into iframe {string} element', async ( { webPage }, element ) => {
+    let iframe = await webPage.getIframe(await helper.readElement(element));
+
+    await webPage.scrollToIframe(iframe, element);
+})
+
+/* Verification Steps */
 
 Then('User verify element {string} is visible', async ( { webPage }, element ) => {
     const locator = await helper.readElement(element);

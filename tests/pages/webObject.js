@@ -9,6 +9,18 @@ class WebPage {
         await this.page.goto(url);
     }
 
+    async getIframe(element) {
+        await this.page.frameLocator(element)
+    }
+
+    async clickIframe(frame, element) {
+        await frame.frameLocator(element).click();
+    }
+
+    async scrollToIframe(frame, element) {
+        await frame.frameLocator(element).scrollIntoViewIfNeeded();
+    }
+
     async clickElement(element) {
         await this.page.locator(element).click();
     }
